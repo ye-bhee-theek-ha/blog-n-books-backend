@@ -100,7 +100,7 @@ Welcome to the backend API repository for Blog and Books! This project provides 
 - **middlewares/**: Custom middleware functions (e.g., authentication, error handling).
 - **models/**: Mongoose schemas and models (e.g., BlogModels, UserModels).
 - **routes/**: Route definitions using Express Router (e.g., Routes.js).
-- **server.js**: Main entry point to start the Express server.
+- **index.js**: Main entry point to start the Express server.
 
 
 
