@@ -45,32 +45,32 @@ router.route('/books')
     .post(protect, authorizeAsAuthor, upload.single("bookfile"), createBook)
     .get(getAllBooks); 
 
-// router.route('/booksHomePage')
-//     .get(getAllBookIdsAndImages); 
+router.route('/booksHomePage')
+    .get(getAllBookIdsAndImages); 
 
-// router.route('/book/like/:id')
-//     .post(protect, likeBook)
-//     .get(protect, getBooklikes)
+router.route('/book/like/:id')
+    .post(protect, likeBook)
+    .get(protect, getBooklikes)
 
-// router.route('/book/:id')
-//     .get(getBookById)
-//     .put(protect, authorizeAsAuthor, updateBook)  
-//     .delete(protect, authorizeAsAuthor, deleteBook);
+router.route('/book/:id')
+    .get(getBookById)
+    .put(protect, authorizeAsAuthor, updateBook)  
+    .delete(protect, authorizeAsAuthor, deleteBook);
 
-// router.route('/bookDetails/:id')
-//     .get(getBookDetailsById)
+router.route('/bookDetails/:id')
+    .get(getBookDetailsById)
 
 
-// // Comment Routes
-// router.route('/comments')
-//     .post(protect, addComment);
+// Comment Routes
+router.route('/comments')
+    .post(protect, addComment);
 
-// router.route('/comments/:blogId')
-//     .get(getCommentsForPost);
+router.route('/comments/:blogId')
+    .get(getCommentsForPost);
 
-// router.route('/comments/:commentId')
-//     .put(protect, updateComment)
-//     .delete(protect, deleteComment);
+router.route('/comments/:commentId')
+    .put(protect, updateComment)
+    .delete(protect, deleteComment);
 
 
 // Tag Routes
@@ -79,17 +79,17 @@ router.route('/tags')
     .get(getTags);
 
 
-// // User Routes
-// router.route('/users/register')
-//     .post(registerUser);
+// User Routes
+router.route('/users/register')
+    .post(registerUser);
 
-// router.route('/users/login')
-//     .post(loginUser);
+router.route('/users/login')
+    .post(loginUser);
 
-// router.route('/users/toggleRole')
-//     .post(protect, toggleRole);
+router.route('/users/toggleRole')
+    .post(protect, toggleRole);
 
-// router.route('/users/getInfo')
-//     .get(protect, getInfo);
+router.route('/users/getInfo')
+    .get(protect, getInfo);
 
 module.exports = router;

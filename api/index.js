@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
     res.send("API is running on vercel...")
 })
 
-app.use("/api", Routes)
+// app.use("/api", Routes)
 
 
 app.use(NotFound);
